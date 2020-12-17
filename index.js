@@ -12,3 +12,18 @@ function wrapAdjective(flair='*') {
             return `You are ${flair}${param}${flair}!`;
         } 
     }
+    
+const Calculator = {
+    add: function(a,b){return a + b},
+    subtract: function(a,b){return a - b}, 
+    multiply: function(a,b){return a * b},
+    divide: function(a,b){return a / b}
+}
+
+function actionApplyer(startint, funcarray) {
+    let y = startint;
+    for (let x of funcarray){
+        y = x(y)
+    }
+    return y;
+}; 
